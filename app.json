@@ -59,6 +59,13 @@
     "description": "Workout diary: plan, log, review and track every workout - offline first.",
     "runtimeVersion": {
       "policy": "appVersion"
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "94c3c995-dab3-4004-9638-d6266f2ba4f5"
+      }
+    },
+    "owner": "aarav12345678"
   }
 }
