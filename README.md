@@ -17,7 +17,7 @@ npm install          # .npmrc sets legacy-peer-deps for Expo's peer ranges
 cp .env.example .env # then fill in your Supabase values
 ```
 
-## Supabase setup (external step — needs you)
+## Supabase setup 
 
 1. Create a project at <https://supabase.com>.
 2. **Project Settings → API**: copy the *Project URL* and the **anon public** key into `.env` as `EXPO_PUBLIC_SUPABASE_URL` / `EXPO_PUBLIC_SUPABASE_ANON_KEY`. Never put the `service_role` key in the app.
