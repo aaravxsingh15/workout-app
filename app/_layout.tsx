@@ -36,7 +36,17 @@ function RootNavigator() {
         </Stack.Protected>
         <Stack.Protected guard={signedIn && onboarded && !recovery}>
           <Stack.Screen name="(tabs)" />
-          {/* Remaining v1 screens (active workout, diary, routines, progress...) are tracked in docs/VERSION_1_SCOPE.md */}
+          <Stack.Screen name="workout/active" options={{ animation: "slide_from_bottom" }} />
+          <Stack.Screen name="workout/summary/[id]" options={{ gestureEnabled: false }} />
+          <Stack.Screen name="workout/[id]" />
+          <Stack.Screen name="workout/edit/[id]" />
+          <Stack.Screen name="exercise-picker" options={{ presentation: "modal", animation: "slide_from_bottom" }} />
+          <Stack.Screen name="exercise/[id]" />
+          <Stack.Screen name="exercise/edit" options={{ presentation: "modal" }} />
+          <Stack.Screen name="exercises" />
+          <Stack.Screen name="routine/[id]" />
+          <Stack.Screen name="bodyweight" />
+          <Stack.Screen name="plate-calculator" />
         </Stack.Protected>
       </Stack>
       {signedIn && onboarded && !recovery ? <ActiveWorkoutBar /> : null}

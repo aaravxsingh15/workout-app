@@ -4,7 +4,7 @@
 
 IronLog's V1 has one purpose: **be the best possible digital workout diary** — plan, log, save, review, edit and track every workout, offline-first. Intelligent Training (recommendations, plateau detection, AI) is deliberately **Version 2** and is not part of this codebase. V1 collects clean, structured data so V2 can build on it.
 
-> **Build status:** see [docs/VERSION_1_SCOPE.md](docs/VERSION_1_SCOPE.md) for an honest done / not-done checklist. The foundation (data model, offline database, sync engine, calculations, auth, onboarding, home, profile/settings) is complete and tested; the workout screens (active workout, diary, routines, progress) are the next milestone.
+> **Build status:** all V1 screens are built and pass typecheck, lint, unit tests and an Android bundle export; the first on-device verification pass is next. See [docs/VERSION_1_SCOPE.md](docs/VERSION_1_SCOPE.md).
 
 ## Stack
 

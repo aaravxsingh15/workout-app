@@ -24,6 +24,9 @@ export default function TabsLayout() {
       }}
     >
       <Tabs.Screen name="index" options={tab('Home', 'home-outline', 'home')} />
+      <Tabs.Screen name="diary" options={tab("Diary", "book-outline", "book")} />
+      <Tabs.Screen name="routines" options={tab("Routines", "list-outline", "list")} />
+      <Tabs.Screen name="progress" options={tab("Progress", "stats-chart-outline", "stats-chart")} />
       <Tabs.Screen name="profile" options={tab('Profile', 'person-outline', 'person')} />
     </Tabs>
   );
