@@ -8,12 +8,25 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "backgroundColor": "#0B0D10",
-    "newArchEnabled": true,
     "plugins": [
       "expo-router",
       "expo-sqlite",
       "expo-secure-store",
-      ["expo-notifications", { "color": "#FF5A36" }]
+      [
+        "expo-notifications",
+        {
+          "color": "#FF5A36"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0B0D10"
+        }
+      ]
     ],
     "ios": {
       "supportsTablet": false,
@@ -28,9 +41,24 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "permissions": ["VIBRATE", "POST_NOTIFICATIONS"],
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ],
+      "predictiveBackGestureEnabled": false,
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "allowBackup": false
     },
-    "web": { "favicon": "./assets/favicon.png" }
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "Workout diary: plan, log, review and track every workout - offline first.",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
   }
 }
