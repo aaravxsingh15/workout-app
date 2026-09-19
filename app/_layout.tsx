@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AppState } from 'react-native';
+import { AppState, View } from 'react-native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -25,7 +25,8 @@ function RootNavigator() {
   if (loading) return <Loading />;
 
   return (
-    <>
+    <View style={{ flex: 1, backgroundColor: p.bg, alignItems: 'center' }}>
+      <View style={{ flex: 1, width: '100%', maxWidth: 560 }}>
       <StatusBar style={p.isDark ? 'light' : 'dark'} />
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: p.bg }, animation: 'fade_from_bottom' }}>
         <Stack.Protected guard={!signedIn || recovery}>
@@ -50,7 +51,8 @@ function RootNavigator() {
         </Stack.Protected>
       </Stack>
       {signedIn && onboarded && !recovery ? <ActiveWorkoutBar /> : null}
-    </>
+      </View>
+    </View>
   );
 }
 
